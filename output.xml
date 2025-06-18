@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.13.0 on win32)" generated="2025-06-18T17:01:08.052240" rpa="false" schemaversion="5">
+<suite id="s1" name="Test" source="D:\Project(Naruapon)\TestLogin ผ่าน Google OAuth\TestLogin ผ่าน Google OAuth\Test.robot">
+<test id="s1-t1" name="(TC01)เปิดเว็บ Medium และตรวจสอบข้อความ" line="12">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:08.215604" level="INFO">Opening browser 'edge' to base url 'https://medium.com/@naruapon/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-obs-studio-%E0%B8%9A%E0%B8%99-macos-bf700c3f7b8b'.</msg>
+<arg>${URL1}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-18T17:01:08.215419" elapsed="2.236394"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-18T17:01:10.452299" elapsed="0.023334"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:10.545551" level="INFO">Current page contains text 'ดาวน์โหลด OBS Studio'.</msg>
+<arg>ดาวน์โหลด OBS Studio</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-06-18T17:01:10.475980" elapsed="0.069649"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-18T17:01:10.545916" elapsed="2.102172"/>
+</kw>
+<status status="PASS" start="2025-06-18T17:01:08.214325" elapsed="4.434879"/>
+</test>
+<test id="s1-t2" name="(TC02)เข้า DormDeal และ Login ผ่าน Google OAuth" line="19">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:12.652758" level="INFO">Opening browser 'edge' to base url 'https://dormdeal-project.vercel.app/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-06-18T17:01:12.652495" elapsed="1.472713"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.125470" elapsed="0.037415"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="root"]/div/div[1]/div[3]/a</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.163158" elapsed="0.033723"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:14.197441" level="INFO">Clicking element 'xpath=//*[@id="root"]/div/div[1]/div[3]/a'.</msg>
+<arg>xpath=//*[@id="root"]/div/div[1]/div[3]/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.197172" elapsed="0.111154"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="login"]/div/button</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.308606" elapsed="0.225444"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:14.535802" level="INFO">${main_window} = ['9188756661CEDC66CDD0DEF225A4F390']</msg>
+<var>${main_window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.534737" elapsed="0.001094"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:14.536117" level="INFO">Clicking element 'xpath=//*[@id="login"]/div/button'.</msg>
+<arg>xpath=//*[@id="login"]/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.535984" elapsed="0.053948"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-18T17:01:19.590819" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-18T17:01:14.590245" elapsed="5.000816"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:19.598413" level="INFO">${all_windows} = ['9188756661CEDC66CDD0DEF225A4F390', '18FD0DFB23107D5526C7B573C927D9F7']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.591767" elapsed="0.006708"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.598981" elapsed="0.031913"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=identifierId</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.631196" elapsed="0.014730"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:19.646305" level="INFO">Typing text '654259002' into text field 'id=identifierId'.</msg>
+<arg>id=identifierId</arg>
+<arg>654259002</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.646153" elapsed="0.095716"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="identifierNext"]/div/button/span</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.742177" elapsed="0.008639"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:19.751185" level="INFO">Clicking element 'xpath=//*[@id="identifierNext"]/div/button/span'.</msg>
+<arg>xpath=//*[@id="identifierNext"]/div/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.751037" elapsed="0.091924"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=Passwd</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-06-18T17:01:19.843239" elapsed="1.274354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:21.117970" level="INFO">Typing text '1730201408866' into text field 'name=Passwd'.</msg>
+<arg>name=Passwd</arg>
+<arg>1730201408866</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:21.117826" elapsed="0.078959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-06-18T17:01:21.197376" level="INFO">Clicking element 'xpath=//*[@id="passwordNext"]/div/button/span'.</msg>
+<arg>xpath=//*[@id="passwordNext"]/div/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:21.197083" elapsed="0.206077"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-06-18T17:01:26.403641" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-06-18T17:01:21.403430" elapsed="5.000297"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${main_window}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-06-18T17:01:26.403999" elapsed="0.006714"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-06-18T17:01:26.410913" elapsed="2.128740"/>
+</kw>
+<status status="PASS" start="2025-06-18T17:01:12.651384" elapsed="15.889079"/>
+</test>
+<status status="PASS" start="2025-06-18T17:01:08.053130" elapsed="20.489483"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Test" id="s1" pass="2" fail="0" skip="0">Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

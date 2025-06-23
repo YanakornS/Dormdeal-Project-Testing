@@ -2,18 +2,18 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${URL}    https://dormdeal-project.vercel.app/
+${URL}    https://dormdeal-project.vercel.app
 ${URL1}    https://medium.com/@naruapon/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-obs-studio-%E0%B8%9A%E0%B8%99-macos-bf700c3f7b8b
-${BROWSER}    edge
+${BROWSER}    chrome
 
 
 *** Test Cases ***
 
-(TC01)เปิดเว็บ Medium และตรวจสอบข้อความ
-    Open Browser    ${URL1}    ${BROWSER}
-    Maximize Browser Window
-    Page Should Contain    ดาวน์โหลด OBS Studio
-    Close Browser
+# (TC01)เปิดเว็บ Medium และตรวจสอบข้อความ
+#     Open Browser    ${URL1}    ${BROWSER}
+#     Maximize Browser Window
+#     Page Should Contain    ดาวน์โหลด OBS Studio
+#     Close Browser
 
 
 (TC02)เข้า DormDeal และ Login ผ่าน Google OAuth
@@ -39,7 +39,9 @@ ${BROWSER}    edge
     Click Element    xpath=//*[@id="passwordNext"]/div/button/span
     Sleep    5s
     Switch Window    ${main_window}[0]   # กลับมาที่หน้าหลัก
+    Sleep    10s
     Close Browser
+   
 
 
 

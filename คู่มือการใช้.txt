@@ -1,0 +1,9 @@
+Wait Until Element Is Visible = รอจนกว่า element ที่ระบุ (เช่นปุ่ม, กล่อง, ข้อความ)
+Click Element = คลิกปุ่ม 
+${main_window}    Get Window Handles  เก็บชื่อ (handle) ของหน้าต่างหลักไว้ในตัวแปร ${main_window} — จะใช้สลับหน้าต่างกลับมาภายหลัง
+${all_windows}    Get Window Handles  ดึงรายการหน้าต่างทั้งหมดที่เปิดอยู่ (เช่น popup + main page)
+Switch Window    ${all_windows}[1] สลับไปหน้าต่าง popup (index 1 คือ popup, เพราะ 0 คือตัวหลัก)
+
+Wait Until Page Contains Element id=identifierId   รอจนกล่องกรอกอีเมลปรากฏใน popup
+Wait Until Element Is Visible    xpath=//*[@id="identifierNext"]/div/button/span   รอจนปุ่มคบิกหรือ "ถัดไป" (Next)ขึ้น 
+Switch Window    ${main_window}[0]  สลับกลับไปยังหน้าหลัก (window หลักที่เก็บไว้ตอนต้น)เพราะ 0 คือหน้าหลัก 1 คือ pupupที่เด้งขึ้น

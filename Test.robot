@@ -4,7 +4,7 @@ Library    SeleniumLibrary
 *** Variables ***
 ${URL}    https://dormdeal-project.vercel.app
 ${URL1}    https://medium.com/@naruapon/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%95%E0%B8%B4%E0%B8%94%E0%B8%95%E0%B8%B1%E0%B9%89%E0%B8%87-obs-studio-%E0%B8%9A%E0%B8%99-macos-bf700c3f7b8b
-${BROWSER}    chrome
+${BROWSER}    edge
 
 
 *** Test Cases ***

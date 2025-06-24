@@ -7,3 +7,4 @@ Switch Window    ${all_windows}[1] สลับไปหน้าต่าง po
 Wait Until Page Contains Element id=identifierId   รอจนกล่องกรอกอีเมลปรากฏใน popup
 Wait Until Element Is Visible    xpath=//*[@id="identifierNext"]/div/button/span   รอจนปุ่มคบิกหรือ "ถัดไป" (Next)ขึ้น 
 Switch Window    ${main_window}[0]  สลับกลับไปยังหน้าหลัก (window หลักที่เก็บไว้ตอนต้น)เพราะ 0 คือหน้าหลัก 1 คือ pupupที่เด้งขึ้น
+Wait Until Page Contains สามารถรับข้อความที่ต้องการค้นหาใน element ได้

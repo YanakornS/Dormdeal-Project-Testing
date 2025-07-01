@@ -6,7 +6,8 @@ Resource   resources/keywords.robot
 
 
 *** Test Cases ***
-(TC01) เข้า DormDeal และ Login ผ่าน Google OAuth
+(TC2001) เข้า DormDeal และ Login ผ่าน Google OAuth
+    [Documentation]    เปิดเว็บ DormDeal และทำการ Login ผ่าน Google OAuth 
     Open WebBrowser 
     Maximize Browser Window
     Login With Google OAuth    ${GOOGLE_USERNAME}    ${GOOGLE_PASSWORD}
@@ -20,7 +21,7 @@ Resource   resources/keywords.robot
 #     Close Browser
 
 
-(TC03)ค้นหาสินค้าที่ไม่มีอยู่จริง
+(TC3003)ค้นหาสินค้าที่ไม่มีอยู่จริง
     Open WebBrowser
     Maximize Browser Window
     Login With Google OAuth    ${GOOGLE_USERNAME}    ${GOOGLE_PASSWORD}

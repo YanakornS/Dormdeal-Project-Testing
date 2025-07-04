@@ -9,6 +9,8 @@ Wait Until Element Is Visible    xpath=//*[@id="identifierNext"]/div/button/span
 Switch Window    ${main_window}[0]  สลับกลับไปยังหน้าหลัก (window หลักที่เก็บไว้ตอนต้น)เพราะ 0 คือหน้าหลัก 1 คือ pupupที่เด้งขึ้น
 Wait Until Page Contains สามารถรับข้อความที่ต้องการค้นหาใน element ได้
 
+Choose File    xpath=//*[@data-test="image-upload"]/input[@type="file"]    ${LOCAL_IMAGE_PATH}  คือการเอาไฟล์รูปภาพจากในเครื่องที่หรืออยู่จากรูปภาพ
+
 robot --outputdir result/ts1 login_test.robot คือการเเยกไฟล์ Report เเละกับ Output เพื่อไว้อีก โฟลเดอร์เเละสามารถตั้งชื่อได้ 
 
 rebot  output1.xml output2.xml  คือการรวมไฟล์ละหว่าง output1 เเละ output2 มันจะทำการรวม Report ของทั้ง 2 ตัวมารวมกันเพื่อจะได้รู้มีการใช้งานอะไรมั้งว่า Pass หรือ Fail

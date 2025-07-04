@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.1 (Python 3.12.2 on win32)" generated="2025-07-04T14:49:36.719005" rpa="false" schemaversion="5">
+<suite id="s1" name="PostingProducts" source="D:\Programming\Term1ProjectFinal\Test-Project\Dormdeal-Project-Testing\Manage product announcement posts\PostingProducts.robot">
+<test id="s1-t1" name="(TC7001) การเพิ่มโพสต์สินค้าสำเร็จ" line="9">
+<kw name="Open WebBrowser" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:36.958061" level="INFO">Opening browser 'chrome' to base url 'http://localhost:5173'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-07-04T14:49:36.957061" elapsed="1.440593"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:36.957061" elapsed="1.440593"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.397654" elapsed="0.019004"/>
+</kw>
+<kw name="Login With Google OAuth" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="login-sign"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.417658" elapsed="0.019005"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:38.436663" level="INFO">Clicking element 'xpath=//*[@data-test="login-sign"]'.</msg>
+<arg>xpath=//*[@data-test="login-sign"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.436663" elapsed="0.103606"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="login"]/div/button</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.540269" elapsed="0.219986"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:38.761256" level="INFO">${main_window} = ['E1A802A7BF34E3A87AC0B8AD91AE42FC']</msg>
+<var>${main_window}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.761256" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:38.762256" level="INFO">Clicking element 'xpath=//*[@id="login"]/div/button'.</msg>
+<arg>xpath=//*[@id="login"]/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.762256" elapsed="0.043010"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:38.806266" level="INFO">Clicking element 'css=[data-test="scroll-bottom"]'.</msg>
+<arg>css=[data-test="scroll-bottom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.806266" elapsed="0.031007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:38.838274" level="INFO">Clicking element 'css=[data-test="accept-button"]'.</msg>
+<arg>css=[data-test="accept-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:38.837273" elapsed="0.601349"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-04T14:49:42.438898" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-04T14:49:39.438622" elapsed="3.000276"/>
+</kw>
+<kw name="Get Window Handles" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:42.444900" level="INFO">${all_windows} = ['E1A802A7BF34E3A87AC0B8AD91AE42FC', '2DBC72F6069084F4BEDABF8679087FD8']</msg>
+<var>${all_windows}</var>
+<doc>Returns all child window handles of the selected browser as a list.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.438898" elapsed="0.006002"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${all_windows}[1]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.444900" elapsed="0.024005"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>id=identifierId</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.468905" elapsed="0.142281"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:42.611186" level="INFO">Typing text '654259002' into text field 'id=identifierId'.</msg>
+<arg>id=identifierId</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.611186" elapsed="0.080018"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="identifierNext"]/div/button/span</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.691204" elapsed="0.013002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:42.704206" level="INFO">Clicking element 'xpath=//*[@id="identifierNext"]/div/button/span'.</msg>
+<arg>xpath=//*[@id="identifierNext"]/div/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.704206" elapsed="0.099023"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>name=Passwd</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:42.803229" elapsed="1.445679"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:44.249908" level="INFO">Typing text '1730201408866' into text field 'name=Passwd'.</msg>
+<arg>name=Passwd</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:44.249908" elapsed="0.058025"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:44.308598" level="INFO">Clicking element 'xpath=//*[@id="passwordNext"]/div/button/span'.</msg>
+<arg>xpath=//*[@id="passwordNext"]/div/button/span</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:44.307933" elapsed="0.208702"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-07-04T14:49:54.517276" level="INFO">Slept 10 seconds.</msg>
+<arg>10s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-07-04T14:49:44.516635" elapsed="10.000641"/>
+</kw>
+<kw name="Switch Window" owner="SeleniumLibrary">
+<arg>${main_window}[0]</arg>
+<doc>Switches to browser window matching ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:54.517276" elapsed="0.003001"/>
+</kw>
+<arg>${GOOGLE_USERNAME}</arg>
+<arg>${GOOGLE_PASSWORD}</arg>
+<status status="PASS" start="2025-07-04T14:49:38.416658" elapsed="16.103619"/>
+</kw>
+<kw name="PostButton" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="post-button"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:54.521277" elapsed="0.010002"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:54.531279" level="INFO">Clicking element 'xpath=//*[@data-test="post-button"]'.</msg>
+<arg>xpath=//*[@data-test="post-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:54.531279" elapsed="0.197044"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:54.521277" elapsed="0.208046"/>
+</kw>
+<kw name="SelectTheOfferButton" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Want-To-Sell}</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:54.729323" elapsed="0.419507"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.149830" level="INFO">Clicking element 'xpath=//*[@data-test="post-type-wts"]'.</msg>
+<arg>${Want-To-Sell}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.149830" elapsed="0.031008"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:54.729323" elapsed="0.451515"/>
+</kw>
+<kw name="ProductName" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=productName</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.180838" elapsed="0.010002"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.191839" level="INFO">Typing text 'Air Jordan 1 mid light smoke grey' into text field 'id=productName'.</msg>
+<arg>id=productName</arg>
+<arg>${product_name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.191839" elapsed="0.077018"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.180838" elapsed="0.089019"/>
+</kw>
+<kw name="SelectCategory" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="category-header"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.269857" elapsed="0.010003"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.279860" level="INFO">Selecting options from selection list 'xpath=//*[@data-test="category"]' by value 67ee888655b50d41195bca16.</msg>
+<arg>${CATEGORY_DROPDOWN}</arg>
+<arg>${MAIN_CATEGORY}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.279860" elapsed="0.042010"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="subcategory-header"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.321870" elapsed="0.011001"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.332871" level="INFO">Selecting options from selection list 'xpath=//*[@data-test="subcategory"]' by value 67ee88a355b50d41195bca22.</msg>
+<arg>${SUB_CATEGORY_DROPDOWN}</arg>
+<arg>${SUB_CATEGORY}</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.332871" elapsed="0.035009"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.269857" elapsed="0.098023"/>
+</kw>
+<kw name="SelectImages" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="image-upload"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.368880" elapsed="0.010002"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.379882" level="INFO">Sending D:\Programming\Term1ProjectFinal\Test-Project\Dormdeal-Project-Testing\resources\images\AirJordan1.jpg to browser.</msg>
+<arg>xpath=//*[@data-test="image-upload"]/input[@type="file"]</arg>
+<arg>${LOCAL_IMAGE_PATH}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.378882" elapsed="0.023113"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.401995" level="INFO">Sending D:\Programming\Term1ProjectFinal\Test-Project\Dormdeal-Project-Testing\resources\images\AirJordan2.jpg to browser.</msg>
+<arg>xpath=//*[@data-test="image-upload"]/input[@type="file"]</arg>
+<arg>${LOCAL_IMAGE_PATH2}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.401995" elapsed="0.017004"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.367880" elapsed="0.051119"/>
+</kw>
+<kw name="Price" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=price</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.418999" elapsed="0.012003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.431002" level="INFO">Typing text '3200' into text field 'id=price'.</msg>
+<arg>id=price</arg>
+<arg>${price}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.431002" elapsed="0.061152"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.418999" elapsed="0.073155"/>
+</kw>
+<kw name="Description" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=description</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.492154" elapsed="0.013003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.505157" level="INFO">Typing text 'เป็นลอยนิดหน่อยเก็บนานไป' into text field 'id=description'.</msg>
+<arg>id=description</arg>
+<arg>${description}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.505157" elapsed="0.091736"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.492154" elapsed="0.104739"/>
+</kw>
+<kw name="Condition" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="condition"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.597896" elapsed="0.011230"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.609126" level="INFO">Clicking element 'xpath=//*[@data-test="used-acceptable"]'.</msg>
+<arg>${condition}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.609126" elapsed="0.036354"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.597896" elapsed="0.047584"/>
+</kw>
+<kw name="Announcement Post Type" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//*[@data-test="posttype"]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.646480" elapsed="0.011009"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-07-04T14:49:55.658483" level="INFO">Clicking element 'xpath=//*[@data-test="postfree"]'.</msg>
+<arg>${announcement_post_type}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-07-04T14:49:55.658483" elapsed="0.041009"/>
+</kw>
+<status status="PASS" start="2025-07-04T14:49:55.646480" elapsed="0.053012"/>
+</kw>
+<doc>เปิดเว็บ DormDeal และทำการ Login ผ่าน Google OAuth</doc>
+<status status="PASS" start="2025-07-04T14:49:36.956061" elapsed="18.744431"/>
+</test>
+<status status="PASS" start="2025-07-04T14:49:36.721008" elapsed="18.979484"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PostingProducts" id="s1" pass="1" fail="0" skip="0">PostingProducts</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

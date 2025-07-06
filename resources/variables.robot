@@ -28,6 +28,9 @@ ${price}    3200
 ${description}    เป็นลอยนิดหน่อยเก็บนานไป
 ${condition}    xpath=//*[@data-test="used-acceptable"]
 ${announcement_post_type}    xpath=//*[@data-test="postfree"]
+${submitbutton}     xpath=//*[@data-test="submit-post"] 
+
+
 
 
 
@@ -36,3 +39,9 @@ ${Post_IMAGE_PATH}     https://firebasestorage.googleapis.com/v0/b/loykratongse-
 ${LOCAL_IMAGE_PATH}    D:/Programming/Term1ProjectFinal/Test-Project/Dormdeal-Project-Testing/resources/images/AirJordan1.jpg
 ${LOCAL_IMAGE_PATH2}    D:/Programming/Term1ProjectFinal/Test-Project/Dormdeal-Project-Testing/resources/images/AirJordan2.jpg
 
+
+
+
+
+# //Sweetalert
+${swal2postsuccess}    xpath=//*[@data-test="swal-post-success"]

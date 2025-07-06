@@ -85,3 +85,15 @@ Condition
 Announcement Post Type
     Wait Until Element Is Visible    xpath=//*[@data-test="posttype"]    timeout=5s
     Click Element    ${announcement_post_type}
+
+
+SubmitPost
+     Wait Until Element Is Visible    ${submitbutton}      timeout=5s
+     Click Element    ${submitbutton}  
+     Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-success"]     timeout=10s
+     Sleep    2s
+     Element Text Should Be           xpath=//*[@data-test="swal-post-success"]      กรุณารอเจ้าหน้าที่ตรวจสอบ!
+     Capture Page Screenshot        ../../screenshots/ManagePost/TC7001.png           
+
+
+

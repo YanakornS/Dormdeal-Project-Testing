@@ -21,6 +21,8 @@ robot --outputdir output2 --output output2.xml testsuit1.robot  คือกา�
 //จำทำการ Merged Output ทั้ง 2 ตัวรวมกันเเละเพิ่มใหม่ในโฟลเด้อชื่อ merged_results
 rebot --outputdir merged_results --output output.xml --log log.html --report report.html ./output1/output1.xml ./output2/output2.xml 
 
+robot --rerunfailed output.xml testsuit1.robot  8คือการกับมารันไฟล์ซ้ำเฉพราะไฟล์ที่ผิด
+
 
 
 

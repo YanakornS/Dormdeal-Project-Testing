@@ -118,3 +118,15 @@ CheckPostFailed
     Element Text Should Be           xpath=//*[@data-test="swal-post-failed"]      กรุณากรอกข้อมูลให้ครบถ้วน!
     Capture Page Screenshot        ${screenshot_path}
 
+
+ProfileButton
+    Wait Until Element Is Visible    ${profile}     timeout=5s
+    Click Element    ${profile}
+
+ClickMy Announcement
+    Wait Until Element Is Visible    ${my_announcement}    timeout=5s
+    Click Element    ${my_announcement}
+
+IconEditPost
+    Wait Until Element Is Visible    ${icon_edit_post}    timeout=5s
+    Click Element    ${icon_edit_post}

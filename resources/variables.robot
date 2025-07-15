@@ -40,6 +40,10 @@ ${LOCAL_IMAGE_PATH}    D:/Programming/Term1ProjectFinal/Test-Project/Dormdeal-Pr
 ${LOCAL_IMAGE_PATH2}    D:/Programming/Term1ProjectFinal/Test-Project/Dormdeal-Project-Testing/resources/images/AirJordan2.jpg
 
 
+# //Profile
+${profile}    xpath=//*[@data-test="profile-button"]
+${my_announcement}    xpath=//*[@data-test="my-announcement"]
+${icon_edit_post}    xpath=//*[@data-test="icon-edit-post"]
 
 
 

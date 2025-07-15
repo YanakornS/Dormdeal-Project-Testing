@@ -188,6 +188,18 @@ Resource   ../../resources/keywords.robot
     CheckPostFailed    (TC7010)
     Close Browser
 
+(TC7011) การแก้ไขโพสต์ประกาศซื้อขายสินค้า
+    [Documentation]    Tes
+    Open WebBrowser 
+    Maximize Browser Window
+    Login With Google OAuth    ${GOOGLE_USERNAME}    ${GOOGLE_PASSWORD}
+    ProfileButton
+    ClickMy Announcement
+    IconEditPost
+    
+  
+
+
 
 
 

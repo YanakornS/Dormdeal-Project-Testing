@@ -24,6 +24,7 @@ rebot --outputdir merged_results --output output.xml --log log.html --report rep
 robot --rerunfailed output.xml testsuit1.robot  8คือการกับมารันไฟล์ซ้ำเฉพราะไฟล์ที่ผิด
 ../
 
+(advrobot) D:\Project\advrobot>.\.venv\Scripts\activate    //คือการ Activate ก่อนถึงจะสามารถ Run Test ได้
 
 
 

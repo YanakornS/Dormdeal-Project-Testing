@@ -1,5 +1,8 @@
 *** Settings ***
 Library    SeleniumLibrary
+Library    DateTime
+Library    BuiltIn 
+Library    String  
 
 
 *** Settings ***
@@ -62,6 +65,8 @@ ProductName
 SelectCategory
         Wait Until Element Is Visible     xpath=//*[@data-test="category-header"]     timeout=5s
         Select From List By Value        ${CATEGORY_DROPDOWN}    ${MAIN_CATEGORY}
+
+SelectSubCategory
         Wait Until Element Is Visible     xpath=//*[@data-test="subcategory-header"]     timeout=5s
         Select From List By Value        ${SUB_CATEGORY_DROPDOWN}    ${SUB_CATEGORY}
 
@@ -90,10 +95,26 @@ Announcement Post Type
 SubmitPost
      Wait Until Element Is Visible    ${submitbutton}      timeout=5s
      Click Element    ${submitbutton}  
-     Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-success"]     timeout=10s
-     Sleep    2s
-     Element Text Should Be           xpath=//*[@data-test="swal-post-success"]      กรุณารอเจ้าหน้าที่ตรวจสอบ!
-     Capture Page Screenshot        ../../screenshots/ManagePost/TC7001.png           
 
+CheckPostSuccess
+    [Arguments]    ${tc_id}    
+    ${timestamp}=       Get Current Date    result_format=%Y-%m-%d_%H-%M-%S
+    ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
+    ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
 
+    Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-success"]     timeout=10s
+    Sleep    2s
+    Element Text Should Be           xpath=//*[@data-test="swal-post-success"]      กรุณารอเจ้าหน้าที่ตรวจสอบ!
+    Capture Page Screenshot        ${screenshot_path}
+
+CheckPostFailed
+    [Arguments]    ${tc_id}    
+    ${timestamp}=       Get Current Date    result_format=%Y-%m-%d_%H-%M-%S
+    ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
+    ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
+
+    Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-failed"]     timeout=10s
+    Sleep    2s
+    Element Text Should Be           xpath=//*[@data-test="swal-post-failed"]      กรุณากรอกข้อมูลให้ครบถ้วน!
+    Capture Page Screenshot        ${screenshot_path}
 

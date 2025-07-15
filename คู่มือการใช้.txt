@@ -9,6 +9,10 @@ Wait Until Element Is Visible    xpath=//*[@id="identifierNext"]/div/button/span
 Switch Window    ${main_window}[0]  สลับกลับไปยังหน้าหลัก (window หลักที่เก็บไว้ตอนต้น)เพราะ 0 คือหน้าหลัก 1 คือ pupupที่เด้งขึ้น
 Wait Until Page Contains สามารถรับข้อความที่ต้องการค้นหาใน element ได้
 
+ CheckPostFailed    (TC7003)   คือการกำหนดt_id เพราะ  เราเพิ่มargument ${tc_id} เข้าไป ให้ TestCase นั้นๆเอาไปรวมกับ TimeStam ตั้งชื่อรูป วัน ช เวลาได้
+
+
+
 Choose File    xpath=//*[@data-test="image-upload"]/input[@type="file"]    ${LOCAL_IMAGE_PATH}  คือการเอาไฟล์รูปภาพจากในเครื่องที่หรืออยู่จากรูปภาพ
 
 robot --outputdir result/ts1 login_test.robot คือการเเยกไฟล์ Report เเละกับ Output เพื่อไว้อีก โฟลเดอร์เเละสามารถตั้งชื่อได้ 
@@ -18,8 +22,17 @@ rebot  output1.xml output2.xml  คือการรวมไฟล์ละห
 
 robot --outputdir output2 --output output2.xml testsuit1.robot  คือการสร้างโฟลเด้อ output2 เเละมีพวกrepots กับ output2 อยุ่ในนั้น
 
+
+rebot --outputdir ..\..\results\mergedPosting --output output.xml --log log.html --report report.html ..\..\results\PostingProduct\output.xml ..\..\results\PostingProduct2\output.xml ..\..\results\PostingProduct3\output.xml ss
+
+
 //จำทำการ Merged Output ทั้ง 2 ตัวรวมกันเเละเพิ่มใหม่ในโฟลเด้อชื่อ merged_results
 rebot --outputdir merged_results --output output.xml --log log.html --report report.html ./output1/output1.xml ./output2/output2.xml 
+
+
+
+//คือการ Merged ในทำเเหน่งโฟลเดอร์ Test จะรวมmerged_postingproducts ในเชื่อใหม่เปลี่ยนชื่อเป็น alllog.html
+rebot --outputdir ..\..\results\merged_results\merged_postingproducts --output output.xml --log alllog.html --report report.html ..\..\results\PostingProduct\output.xml ..\..\results\PostingProduct2\output.xml ..\..\results\PostingProduct3\output.xml 
 
 robot --rerunfailed output.xml testsuit1.robot  8คือการกับมารันไฟล์ซ้ำเฉพราะไฟล์ที่ผิด
 ../

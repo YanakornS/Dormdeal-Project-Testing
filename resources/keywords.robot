@@ -102,9 +102,9 @@ CheckPostSuccess
     ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
     ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
 
-    Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-success"]     timeout=10s
+    Wait Until Page Contains Element       ${swal2postsuccess}     timeout=10s
     Sleep    2s
-    Element Text Should Be           xpath=//*[@data-test="swal-post-success"]      กรุณารอเจ้าหน้าที่ตรวจสอบ!
+    Element Text Should Be           ${swal2postsuccess}      โพสต์สำเร็จ
     Capture Page Screenshot        ${screenshot_path}
 
 CheckPostFailed
@@ -113,9 +113,9 @@ CheckPostFailed
     ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
     ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
 
-    Wait Until Page Contains Element       xpath=//*[@data-test="swal-post-failed"]     timeout=10s
+    Wait Until Page Contains Element       ${swal2postfailed}      timeout=10s
     Sleep    2s
-    Element Text Should Be           xpath=//*[@data-test="swal-post-failed"]      กรุณากรอกข้อมูลให้ครบถ้วน!
+    Element Text Should Be           ${swal2postfailed}       กรุณากรอกข้อมูลให้ครบถ้วน!
     Capture Page Screenshot        ${screenshot_path}
 
 
@@ -123,10 +123,52 @@ ProfileButton
     Wait Until Element Is Visible    ${profile}     timeout=5s
     Click Element    ${profile}
 
-ClickMy Announcement
+Click My Announcement
     Wait Until Element Is Visible    ${my_announcement}    timeout=5s
     Click Element    ${my_announcement}
 
 IconEditPost
     Wait Until Element Is Visible    ${icon_edit_post}    timeout=5s
     Click Element    ${icon_edit_post}
+    Wait Until Page Contains Element   ${checkheading}    timeout=5s
+
+EditPrice
+    Wait Until Element Is Visible    ${editprice}    timeout=5s
+    Click Element    ${editprice}
+    Input Text    id=price    ${price_edit}
+SubmitUpdatePost
+    Wait Until Element Is Visible    ${submitupdatepost}    timeout=5s
+    Click Element    ${submitupdatepost}
+
+CheckPostUpdateSuccess
+    [Arguments]    ${tc_id}    
+    ${timestamp}=       Get Current Date    result_format=%Y-%m-%d_%H-%M-%S
+    ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
+    ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
+
+    Wait Until Page Contains Element       ${swal2updatepostsuccess}     timeout=10s
+    Sleep    2s
+    Element Text Should Be           ${swal2updatepostsuccess}      อัปเดตโพสต์สำเร็จ!
+    Capture Page Screenshot        ${screenshot_path}
+
+
+# //Button
+CancelUpdatePost
+    Wait Until Element Is Visible    ${submitcancelupdatepost}    timeout=5s
+    Click Element    ${submitcancelupdatepost}
+   
+
+
+
+CheckPostCancelUpdate
+    [Arguments]    ${tc_id}    
+    ${timestamp}=       Get Current Date    result_format=%Y-%m-%d_%H-%M-%S
+    ${filename}=        Set Variable    ${tc_id}_${timestamp}.png
+    ${screenshot_path}=    Set Variable    ./screenshots/ManagePost/${filename}
+
+    Wait Until Element Is Visible       ${swal2confirmcancelupdatepost}      timeout=10s
+    Click Element    ${swal2confirmcancelupdatepost}  
+    Wait Until Page Contains Element       ${swal2cancelupdatepost}     timeout=10s
+    Sleep    2s
+    Element Text Should Be           ${swal2cancelupdatepost}      คุณได้ยกเลิกการแก้ไขโพสต์แล้ว
+    Capture Page Screenshot        ${screenshot_path}

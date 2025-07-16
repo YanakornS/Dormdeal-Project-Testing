@@ -189,14 +189,31 @@ Resource   ../../resources/keywords.robot
     Close Browser
 
 (TC7011) การแก้ไขโพสต์ประกาศซื้อขายสินค้า
-    [Documentation]    Tes
+    [Documentation]    Test Verify that a user can successfully edit an existing product post by updating the price and submitting the changes. 
     Open WebBrowser 
     Maximize Browser Window
     Login With Google OAuth    ${GOOGLE_USERNAME}    ${GOOGLE_PASSWORD}
     ProfileButton
-    ClickMy Announcement
+    Click My Announcement
     IconEditPost
+    EditPrice
+    SubmitUpdatePost
+    CheckPostUpdateSuccess    (TC7011)
+    Close Browser
     
+(TC7012) การแก้ไขโพสต์ประกาศซื้อขายสินค้า(กดยกเลิกไม่ต้องการเเก้ไข)    
+    [Documentation]    Test Verify that a user can cancel the edit of an existing product post without making any changes.
+    Open WebBrowser 
+    Maximize Browser Window
+    Login With Google OAuth    ${GOOGLE_USERNAME}    ${GOOGLE_PASSWORD}
+    ProfileButton
+    Click My Announcement
+    IconEditPost
+    CancelUpdatePost
+    CheckPostCancelUpdate    (TC7012)
+    Close Browser
+
+
   
 
 

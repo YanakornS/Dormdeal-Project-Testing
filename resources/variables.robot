@@ -43,9 +43,41 @@ ${LOCAL_IMAGE_PATH2}    D:/Programming/Term1ProjectFinal/Test-Project/Dormdeal-P
 # //Profile
 ${profile}    xpath=//*[@data-test="profile-button"]
 ${my_announcement}    xpath=//*[@data-test="my-announcement"]
-${icon_edit_post}    xpath=//*[@data-test="icon-edit-post"]
+
+# //IconEditPost -- ตามด้วย ID Post ที่เราต้องการที่จะ Edit 
+${icon_edit_post}    xpath=//*[@data-test="icon-edit-post-686ad1cca9c3972f5974db3f"]
+${icon_delete_post}    xpath=//*[@data-test="icon-delete-post-................."]
+
 
 
 
 # //Sweetalert
-${swal2postsuccess}    xpath=//*[@data-test="swal-post-success"]
+${swal2postsuccess}    xpath=//*[@data-test="swal-post-success"] 
+${swal2postfailed}    xpath=//*[@data-test="swal-post-failed"]
+${swal2updatepostsuccess}    xpath=//*[@data-test="swal-post-update-success"]
+${swal2cancelupdatepost}    xpath=//*[@data-test="swal-post-cancel-update-success"]
+${swal2confirmcancelupdatepost}    xpath=//*[@data-test="swal-post-confirm-cancelupdate"]
+
+
+
+
+# //เช็คว่าไปหน้านั้นจริงๆเจอหัวข้อนี้จริงๆ
+${checkheading}    xpath=//*[@data-test="header-edit-productdetails"]
+
+
+
+# //ButtonEditPost
+${submitcancelupdatepost}    xpath=//*[@data-test="submit-cancel-update-post"]
+
+
+${editproductdetails}    xpath=//*[@data-test="edit-productdetails"]
+${editprice}    xpath=//*[@data-test="edit-price"]
+${submitupdatepost}    xpath=//*[@data-test="submit-update-post"]
+
+
+
+
+
+
+# DetailsEditPost
+${price_edit}    6500
